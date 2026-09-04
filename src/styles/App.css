@@ -1,12 +1,137 @@
-h1 {
-    color: #27aedb;
-    text-align: center;
-    }
-    
+* {
+  box-sizing: border-box;
+}
 
-button{
-    color: #27aedb;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f8f8;
+}
+
+#main {
+  min-height: 100vh;
+  padding: 60px 20px;
+}
+
+.menu-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+.underline {
+  width: 70px;
+  height: 4px;
+  margin: 10px auto;
+  background: #c59d5f;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.btn-container button {
+  padding: 8px 18px;
+  background: transparent;
+  border: 2px solid #c59d5f;
+  border-radius: 5px;
+  color: #c59d5f;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-container button:hover,
+.btn-container button.active {
+  background: #c59d5f;
+  color: white;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px 25px;
+}
+
+.menu-item {
+  display: flex;
+  gap: 20px;
+  background: white;
+}
+
+.photo {
+  width: 225px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #c59d5f;
+  border-radius: 5px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dotted #999;
+}
+
+.item-header h4 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  text-transform: capitalize;
+}
+
+.item-header .price {
+  color: #c59d5f;
+}
+
+.item-category {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #777;
+}
+
+.item-text {
+  color: #666;
+  line-height: 1.5;
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .menu-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  #main {
+    padding: 30px 15px;
+  }
+
+  .menu-item {
+    flex-direction: column;
+  }
+
+  .photo {
+    width: 100%;
+    height: 200px;
+  }
+
+  .btn-container {
+    flex-wrap: wrap;
+  }
 }
